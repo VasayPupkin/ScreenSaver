@@ -28,12 +28,16 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     BubbleShape.cpp \
-    BubbleMovementManagment.cpp
+    BubbleMovementManagment.cpp \
+    Timer.cpp
 
 HEADERS += \
         mainwindow.h \
     BubbleShape.h \
-    BubbleMovementManagment.h
+    BubbleMovementManagment.h \
+    Timer.h
 
 FORMS += \
         mainwindow.ui
+
+unix:!macx: LIBS += -lboost_system -lboost_chrono
